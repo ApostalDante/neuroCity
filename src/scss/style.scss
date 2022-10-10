@@ -1,0 +1,106 @@
+@import "null_style";
+
+@import "slider";
+
+@import "canvas";
+
+@import "video";
+
+/*--------------------*/
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.block {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.conteiner {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.css {
+    border: 1px solid #000;
+    margin: auto;
+    width: 64rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cssB2 {
+    width: 16rem;
+    height: 10rem;
+    border: 1px solid #000;
+}
+
+
+/*выпадающие меню*/
+
+body.lock {
+    overflow: hidden;
+}
+
+.header__body {
+    // height: 50px;
+    // border: 1px solid #000;
+}
+
+.styleButton {
+    position: fixed;
+    width: 10%;
+    height: 30%;
+    overflow: auto;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background-color: #9D0A00;
+    border: 1px solid #000;
+}
+
+.buttonElem1 {
+    top: -100%;
+    left: 0;
+}
+
+.buttonElem2 {
+    top: -100%;
+    right: 0;
+}
+
+.buttonElem3 {
+    bottom: -100%;
+}
+
+.buttonElem1.active {
+    top: 0;
+}
+
+.buttonElem2.active {
+    top: 0;
+}
+
+.buttonElem3.active {
+    bottom: 0;
+}
+
+
+@media (max-width: 768px) {}

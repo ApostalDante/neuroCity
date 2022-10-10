@@ -1,0 +1,26 @@
+.video {
+    text-align: center;
+    position: relative;
+}
+
+.videoItem {
+    width: 50rem;
+    padding: 0.1rem;
+    border: 2px solid #727272;
+}
+
+
+.time {
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    right: 30%;
+    color: #fff;
+
+}
+
+.time.stop {
+    display: none;
+}

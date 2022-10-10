@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html' , {
+"title":"Главная"
+})
+
+<body>
+    @@include('html/header.html' , {})
+    <main>
+        <div class="block">
+            <h2>Простой слайдер для touch устройств</h2>
+            @@include('html/slider.html' , {})
+        </div>
+        <div class="block">
+            <h2>Геометрические фигуры</h2>
+            @@include('html/canvas.html' , {})
+        </div>
+        <div class="block">
+            <h2>Видео</h2>
+            @@include('html/video.html' , {})
+        </div>
+        <div class="block">
+            <h2>получение JSON данных с помощью HTTP</h2>
+        </div>
+        <div class="block">
+            <h2>получение JSON данных с помощью web sockets</h2>
+        </div>
+        <div class="block">
+            <h2>2 блока (1-Главный, 2-Дочерний)</h2>
+            <div class="conteiner">
+                <h3>с помощью JS</h3>
+                <div id="js">
+                    <span>1-Главный</span>
+                    <div id="jsB2">
+                        <span">2-Дочерний</span>
+                    </div>
+                </div>
+            </div>
+            <div class="conteiner">
+                <h3>с помощью CSS</h3>
+                <div class="css">
+                    <span>1-Главный</span>
+                    <div class="cssB2">
+                        <span">2-Дочерний</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>только HTML</h3>
+                <div style="border: 1px solid rgb(0, 0, 0); margin: auto; width: 64rem; height: 20rem;
+                    display: flex; flex-direction: column; align-items: center; 
+                    justify-content: center;">
+                    <span>1-Главный</span>
+                    <div style="width: 16rem; height: 10rem; border: 1px solid rgb(0, 0, 0);">
+                        <span">2-Дочерний</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <h2>Создать элемент на странице</h2>
+            <div class="header">
+                <div class="container">
+                    <div class="header__body">
+                        <button class="button__open">нажми</button>
+                    </div>
+                    <div class="buttonElem1 styleButton">
+                        <span>Элемент 1</span>
+                    </div>
+                    <div class="buttonElem2 styleButton ">
+                        <span>Элемент 2</span>
+                    </div>
+                    <div class="buttonElem3 styleButton ">
+                        <span>Элемент 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="block">
+            <h2>случайное количество разноцветных
+                квадратиков
+            </h2>
+        </div>
+    </main>
+    @@include('html/footer.html' , {})
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
