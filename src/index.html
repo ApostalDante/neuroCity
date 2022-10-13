@@ -20,12 +20,7 @@
             @@include('html/video.html' , {})
         </div>
         <div class="block">
-            <h2>получение JSON данных с помощью HTTP</h2>
-        </div>
-        <div class="block">
-            <h2>получение JSON данных с помощью web sockets</h2>
-        </div>
-        <div class="block">
+            <!--Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине-->
             <h2>2 блока (1-Главный, 2-Дочерний)</h2>
             <div class="conteiner">
                 <h3>с помощью JS</h3>
@@ -78,14 +73,15 @@
         </div>
         </div>
         <div class="block">
-            <h2>случайное количество разноцветных
+            <h2>случайное количество (от 10 до 100 ) разноцветных
                 квадратиков
             </h2>
+            @@include('html/printSquares.html' , {})
         </div>
     </main>
     @@include('html/footer.html' , {})
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script type="module" src="js/app.min.js"></script>
 </body>
 
 </html>

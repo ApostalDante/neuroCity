@@ -1,0 +1,25 @@
+/*8. С помощью цикла вывести случайное количество (от 10 до 100 ) разноцветных
+квадратиков на HTML страницу ( исполнять код желательно на JS ).*/
+
+.btnRow{
+    display:flex;
+justify-content:center;
+}
+
+.squares{
+    text-align: center;
+    display:flex;
+    justify-content:center;
+}
+
+.field{
+    width: 64rem;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.field-card{
+    margin: 0.5rem;
+    height: 7rem;
+    width: 7rem;
+}

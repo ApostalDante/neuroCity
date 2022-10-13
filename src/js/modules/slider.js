@@ -1,3 +1,5 @@
+//Реализуйте простой слайдер для touch устройств (события мыши могут не обрабатываться);
+
 export function slider() {
     let offset = 0;
     const sliderLine = document.querySelector('.sliderLine');

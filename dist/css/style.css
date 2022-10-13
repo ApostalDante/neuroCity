@@ -90,8 +90,6 @@ h6 {
   font-weight: inherit;
 }
 
-/*slider*/
-
 h2 {
   font-size: 2rem;
   font-weight: 900;
@@ -146,10 +144,9 @@ button:active {
   color: #fff;
 }
 
-/*canvas*/
-
 .canvasConteiner {
   width: 50rem;
+  height: 37.5rem;
   margin: auto;
   border: 2px solid #727272;
 }
@@ -183,6 +180,43 @@ button:active {
   display: none;
 }
 
+/*8. С помощью цикла вывести случайное количество (от 10 до 100 ) разноцветных
+квадратиков на HTML страницу ( исполнять код желательно на JS ).*/
+
+.btnRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.squares {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.field {
+  width: 64rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.field-card {
+  margin: 0.5rem;
+  height: 7rem;
+  width: 7rem;
+}
+
 /*--------------------*/
 
 h1 {
@@ -211,6 +245,8 @@ h3 {
   margin: 2rem 0rem;
 }
 
+/*Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине*/
+
 .css {
   border: 1px solid #000;
   margin: auto;
@@ -236,6 +272,8 @@ h3 {
   height: 10rem;
   border: 1px solid #000;
 }
+
+/*---------------------------------*/
 
 /*выпадающие меню*/
 
