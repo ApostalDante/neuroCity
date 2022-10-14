@@ -89,106 +89,31 @@ doAsyncTask();
 /*---------------------*/
 
 /*-----------------*/
-/*
-let ws = new WebSocket('wss://bundles.office.com');
 
-socket.addEventListener('open', (event) => {
-    socket.send('Hello Server!');
-    if (ws.onmessage(message)) {
-        console.log(`Received: ${message}`);
-    } else {
-        ws.onerror(error)
-        console.err(`Failed: ${error}`);
-    }
-});
-*/
-
-/*
-const ws = require('websocket').server;
-const http = require('http');
-
-const wss = new ws.Server({ noServer: true });
-
-function accept(req, res) {
-    // все входящие запросы должны использовать websockets
-    if (!req.headers.upgrade || req.headers.upgrade.toLowerCase() != 'websocket') {
-        res.end();
-        return;
-    }
-
-    // может быть заголовок Connection: keep-alive, Upgrade
-    if (!req.headers.connection.match(/\bupgrade\b/i)) {
-        res.end();
-        return;
-    }
-
-    wss.handleUpgrade(req, req.socket, Buffer.alloc(0), onConnect);
+if (!window.WebSocket) {
+    document.body.innerHTML = 'WebSocket в этом браузере не поддерживается.';
 }
 
-function onConnect(ws) {
-    ws.on('message', function (message) {
-        let name = message.match(/([\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{Join_C}]+)$/gu) || "Гость";
-        ws.send(`Привет с сервера, ${name}!`);
+// создать подключение
+var socket = new WebSocket("ws://localhost:8081");
 
-        setTimeout(() => ws.close(1000, "Пока!"), 5000);
-    });
-}*/
-/*
-if (!module.parent) {
-    http.createServer(accept).listen(8080);
-} else {
-    exports.accept = accept;
-}*/
+// отправить сообщение из формы publish
+document.forms.publish.onsubmit = function () {
+    var outgoingMessage = this.message.value;
 
-var WebSocketServer = require('websocket').server;
-var http = require('http');
+    socket.send(outgoingMessage);
+    return false;
+};
 
-var server = http.createServer(function (request, response) {
-    console.log((new Date()) + ' Received request for ' + request.url);
-    response.writeHead(404);
-    response.end();
-});
-server.listen(3000, function () {
-    console.log((new Date()) + ' Server is listening on port 3000');
-});
+// обработчик входящих сообщений
+socket.onmessage = function (event) {
+    var incomingMessage = event.data;
+    showMessage(incomingMessage);
+};
 
-wsServer = new WebSocketServer({
-    httpServer: server,
-    // You should not use autoAcceptConnections for production
-    // applications, as it defeats all standard cross-origin protection
-    // facilities built into the protocol and the browser.  You should
-    // *always* verify the connection's origin and decide whether or not
-    // to accept it.
-    autoAcceptConnections: false
-});
-
-function originIsAllowed(origin) {
-    // put logic here to detect whether the specified origin is allowed.
-    return true;
+// показать сообщение в div#subscribe
+function showMessage(message) {
+    var messageElem = document.createElement('div');
+    messageElem.appendChild(document.createTextNode(message));
+    document.getElementById('subscribe').appendChild(messageElem);
 }
-
-wsServer.on('request', function (request) {
-    if (!originIsAllowed(request.origin)) {
-        // Make sure we only accept requests from an allowed origin
-        request.reject();
-        console.log((new Date()) + ' Connection from origin ' + request.origin + ' rejected.');
-        return;
-    }
-
-    var connection = request.accept('echo-protocol', request.origin);
-    console.log((new Date()) + ' Connection accepted.');
-    connection.on('message', function (message) {
-        if (message.type === 'utf8') {
-            console.log('Received Message: ' + message.utf8Data);
-            connection.sendUTF(message.utf8Data);
-        }
-        else if (message.type === 'binary') {
-            console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');
-            connection.sendBytes(message.binaryData);
-        }
-    });
-    connection.on('close', function (reasonCode, description) {
-        console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
-    });
-});
-

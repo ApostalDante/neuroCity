@@ -39,6 +39,5 @@ export function printSquares() {
             let parent = document.querySelector('.field-card');
             parent.remove();
         }
-
     });
 }

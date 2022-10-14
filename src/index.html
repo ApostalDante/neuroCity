@@ -20,6 +20,19 @@
             @@include('html/video.html' , {})
         </div>
         <div class="block">
+            <h2>web sockets</h2>
+            <div>
+                <!-- форма для отправки сообщений -->
+                <form name="publish">
+                    <input class="soket" type="text" name="message" />
+                    <input class="soket" type="submit" value="Отправить" />
+                </form>
+
+                <!-- здесь будут появляться входящие сообщения -->
+                <div id="subscribe"></div>
+            </div>
+        </div>
+        <div class="block">
             <!--Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине-->
             <h2>2 блока (1-Главный, 2-Дочерний)</h2>
             <div class="conteiner">
