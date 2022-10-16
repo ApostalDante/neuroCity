@@ -95,25 +95,29 @@ if (!window.WebSocket) {
 }
 
 // создать подключение
-var socket = new WebSocket("ws://localhost:8081");
+const socket = new WebSocket("ws://localhost:8081");
 
-// отправить сообщение из формы publish
 document.forms.publish.onsubmit = function () {
-    var outgoingMessage = this.message.value;
-
-    socket.send(outgoingMessage);
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+    socket.send(JSON.stringify({
+        name, message
+    }));
     return false;
 };
 
 // обработчик входящих сообщений
 socket.onmessage = function (event) {
-    var incomingMessage = event.data;
+    let incomingMessage = event.data;
     showMessage(incomingMessage);
 };
 
 // показать сообщение в div#subscribe
 function showMessage(message) {
-    var messageElem = document.createElement('div');
+    let messageElem = document.createElement('div');
     messageElem.appendChild(document.createTextNode(message));
+    let json = JSON.parse(message);
+    console.log(json);
     document.getElementById('subscribe').appendChild(messageElem);
 }
+

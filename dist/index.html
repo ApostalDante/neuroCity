@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20221014130507">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221016174224">
     <title>Главная</title>
 </head>
 
@@ -52,16 +52,12 @@
         </div>
         <div class="block">
             <h2>web sockets</h2>
-            <div>
-                <!-- форма для отправки сообщений -->
-                <form name="publish">
-                    <input class="soket" type="text" name="message" />
-                    <input class="soket" type="submit" value="Отправить" />
-                </form>
-
-                <!-- здесь будут появляться входящие сообщения -->
-                <div id="subscribe"></div>
-            </div>
+            <form name="publish" id="messageForm">
+                <input class="soket" type="text" name="name" id="name" />
+                <input class="soket" type="text" name="message" id="message" />
+                <input class="soket" type="submit" value="send" />
+            </form>
+            <div id="subscribe"></div>
         </div>
         <div class="block">
             <!--Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине-->
@@ -134,8 +130,8 @@
         </div>
     </main>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js?_v=20221014130507"></script>
-    <script type="module" src="js/app.min.js?_v=20221014130507"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js?_v=20221016174224"></script>
+    <script type="module" src="js/app.min.js?_v=20221016174224"></script>
 </body>
 
 </html>
