@@ -17,7 +17,7 @@ export function watchVideo() {
     })
 
     function getTimeVideo() {
-        document.getElementById("demo").innerHTML = vid.currentTime.toFixed(4);
+        document.getElementById("demo").innerHTML = vid.currentTime.toFixed(2);
     }
 
     vid.onended = function () {

@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20221016174224">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <title>Главная</title>
 </head>
 
 <body>
-    <header>
+    <div class="wrapper">
+        <header>
     <h1>ТЕСТОВОЕ ЗАДАНИЕ</h1>
 </header>
-    <main>
-        <div class="block">
-            <h2>Простой слайдер для touch устройств</h2>
-            <!--Реализуйте простой слайдер для touch устройств (события мыши могут не обрабатываться);-->
+        <main class="main">
+            <div class="block">
+                <h2>Простой слайдер</h2>
+                <!--Реализуйте простой слайдер для touch устройств (события мыши могут не обрабатываться);-->
 <div class="container">
     <div class="slider">
         <div class="sliderLine">
@@ -23,7 +25,7 @@
             <img src="img/WE BUILD.jpg" alt="">
             <img src="img/WE MANAGE.jpg" alt="">
             <!-- <img src="img/WE PLAN.jpg" alt=""> -->
-            <a href="#"><img src="img/WE PLAN.jpg" alt=""></a>
+            <a target="_blank" href="https://github.com/ApostalDante/neuroCity"><img src="img/WE PLAN.jpg" alt=""></a>
         </div>
     </div>
     <div class="sliderButton">
@@ -31,92 +33,122 @@
         <button class="sliderNext">Next</button>
     </div>
 </div>
+            </div>
+            <div class="block">
+                <h2>Простой слайдер для touch устройств</h2>
+                <div class="swiper">
+    <div class="image-slider swiper-container">
+        <div class="image-slider__wrapper swiper-wrapper">
+            <div class="image-slider_slide swiper-slide">
+                <div class="image-slider__image">
+                    <picture><source srcset="img/гомер.webp" type="image/webp"><img src="img/гомер.jpg" alt=""></picture>
+                </div>
+            </div>
+            <div class="image-slider_slide swiper-slide">
+                <div class="image-slider__image">
+                    <img src="img/WE BUILD.jpg" alt="">
+                </div>
+            </div>
+            <div class="image-slider_slide swiper-slide">
+                <div class="image-slider__image">
+                    <img src="img/WE MANAGE.jpg" alt="">
+                </div>
+            </div>
+            <div class="image-slider_slide swiper-slide">
+                <div class="image-slider__image">
+                    <a target="_blank" href="https://github.com/ApostalDante/neuroCity"><img src="img/WE PLAN.jpg"
+                            alt=""></a>
+                </div>
+            </div>
         </div>
-        <div class="block">
-            <h2>Геометрические фигуры</h2>
-            <!--Нарисуйте на canvas основные геометрические фигуры-->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+            </div>
+            <div class="block">
+                <h2>Геометрические фигуры</h2>
+                <!--Нарисуйте на canvas основные геометрические фигуры-->
 
 <div class="canvasConteiner">
     <canvas class="canvas" id="canvas">Not work</canvas>
 </div>
-        </div>
-        <div class="block">
-            <h2>Видео</h2>
-            <div class="video">
+            </div>
+            <div class="block">
+                <h2>Видео</h2>
+                <div class="video">
     <video class="videoItem" id="fon">
         <source src="video/video720.webm" type="video/webm">
         <source src="video/video720.mp4" type="video/mp4">
     </video>
     <p class="time" id='time'>Playback position: <span id="demo"></span></p>
 </div>
-        </div>
-        <div class="block">
-            <h2>web sockets</h2>
-            <form name="publish" id="messageForm">
-                <input class="soket" type="text" name="name" id="name" />
-                <input class="soket" type="text" name="message" id="message" />
-                <input class="soket" type="submit" value="send" />
-            </form>
-            <div id="subscribe"></div>
-        </div>
-        <div class="block">
-            <!--Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине-->
-            <h2>2 блока (1-Главный, 2-Дочерний)</h2>
-            <div class="conteiner">
-                <h3>с помощью JS</h3>
-                <div id="js">
-                    <span>1-Главный</span>
-                    <div id="jsB2">
-                        <span">2-Дочерний</span>
+            </div>
+            <div class="block">
+                <h2>web sockets</h2>
+                <form name="publish" id="messageForm">
+                    <input class="soket" type="text" name="name" id="name" />
+                    <input class="soket" type="text" name="message" id="message" />
+                    <input class="soket" type="submit" value="send" />
+                </form>
+                <div id="subscribe"></div>
+            </div>
+            <div class="block">
+                <!--Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине-->
+                <h2>2 блока (1-Главный, 2-Дочерний)</h2>
+                <div class="conteiner">
+                    <h3>с помощью JS</h3>
+                    <div id="js">
+                        <span id="span">1-Главный</span>
+                        <div id="jsB2">
+                            <span">2-Дочерний</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteiner">
+                    <h3>с помощью CSS</h3>
+                    <div class="css">
+                        <span class="span">1-Главный</span>
+                        <div class="cssB2">
+                            <span">2-Дочерний</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>только HTML</h3>
+                    <div style="border: 1px solid rgb(0, 0, 0); margin: auto; width: 32rem; height: 10rem;position: relative;
+                        display: flex; flex-direction: column; align-items: center; 
+                        justify-content: center;">
+                        <span style="position: absolute; top: 1rem;">1-Главный</span>
+                        <div style="width: 8rem; height: 5rem; border: 1px solid rgb(0, 0, 0);">
+                            <span>2-Дочерний</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="conteiner">
-                <h3>с помощью CSS</h3>
-                <div class="css">
-                    <span>1-Главный</span>
-                    <div class="cssB2">
-                        <span">2-Дочерний</span>
+            <div class="block">
+                <h2>Создать элемент на странице</h2>
+                <div class="header">
+                    <div class="container">
+                        <div class="header__body">
+                            <button class="button__open">нажми</button>
+                        </div>
+                        <div class="buttonElem1 styleButton">
+                            <span>Элемент 1</span>
+                        </div>
+                        <div class="buttonElem2 styleButton ">
+                            <span>Элемент 2</span>
+                        </div>
+                        <div class="buttonElem3 styleButton ">
+                            <span>Элемент 3</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <h3>только HTML</h3>
-                <div style="border: 1px solid rgb(0, 0, 0); margin: auto; width: 64rem; height: 20rem;
-                    display: flex; flex-direction: column; align-items: center; 
-                    justify-content: center;">
-                    <span>1-Главный</span>
-                    <div style="width: 16rem; height: 10rem; border: 1px solid rgb(0, 0, 0);">
-                        <span">2-Дочерний</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block">
-            <h2>Создать элемент на странице</h2>
-            <div class="header">
-                <div class="container">
-                    <div class="header__body">
-                        <button class="button__open">нажми</button>
-                    </div>
-                    <div class="buttonElem1 styleButton">
-                        <span>Элемент 1</span>
-                    </div>
-                    <div class="buttonElem2 styleButton ">
-                        <span>Элемент 2</span>
-                    </div>
-                    <div class="buttonElem3 styleButton ">
-                        <span>Элемент 3</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="block">
-            <h2>случайное количество (от 10 до 100 ) разноцветных
-                квадратиков
-            </h2>
-            <!--8. С помощью цикла вывести случайное количество (от 10 до 100 ) разноцветных
+            <div class="block">
+                <h2>случайное количество (от 10 до 100 ) разноцветных
+                    квадратиков
+                </h2>
+                <!--8. С помощью цикла вывести случайное количество (от 10 до 100 ) разноцветных
 квадратиков на HTML страницу ( исполнять код желательно на JS ).-->
 
 <div class="btnRow">
@@ -127,11 +159,15 @@
     <div class="field" id="squares">
     </div>
 </div>
-        </div>
-    </main>
-    <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js?_v=20221016174224"></script>
-    <script type="module" src="js/app.min.js?_v=20221016174224"></script>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="footer-a"><a href="https://github.com/ApostalDante/neuroCity">github</a></div>
+</footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>

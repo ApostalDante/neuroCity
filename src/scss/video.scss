@@ -11,7 +11,7 @@
 
 
 .time {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     position: absolute;
     top: 90%;
@@ -23,4 +23,37 @@
 
 .time.stop {
     display: none;
+}
+
+@media (max-width: 800px) {
+    .videoItem {
+        max-width: 40rem;
+    }
+    .time {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 600px) {
+    .videoItem {
+        max-width: 30rem;    
+    }
+    .time {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 400px) {
+    .videoItem {
+        max-width: 20rem;
+    }
+    .time {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 300px) {
+    .videoItem {
+        max-width: 15rem;
+    }
+    .time {
+        font-size: 0.3rem;
+    }
 }

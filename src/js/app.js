@@ -13,6 +13,9 @@ watchVideoFunctions.watchVideo();
 import * as printSquaresFunctions from "./modules/printSquares.js";
 printSquaresFunctions.printSquares();
 
+import * as swiperSliderFunction from "./modules/swiperSlider.js";
+swiperSliderFunction.swiperSlider();
+
 
 
 
@@ -20,18 +23,23 @@ printSquaresFunctions.printSquares();
 /*Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине*/
 
 let block = document.getElementById('js');
+let span = document.getElementById('span');
 let block2 = document.getElementById('jsB2');
 block.style.border = '1px solid #000';
 block.style.margin = 'auto';
-block.style.width = "64rem";
-block.style.height = '20rem';
+block.style.width = "32rem";
+block.style.height = '10rem';
 block.style.display = 'flex';
 block.style["flex-direction"] = 'column';
 block.style["align-items"] = 'center';
 block.style["justify-content"] = 'center';
+block.style.position = 'relative';
 
-block2.style.width = '16rem';
-block2.style.height = '10rem';
+span.style.position = 'absolute';
+span.style.top = '1rem';
+
+block2.style.width = '8rem';
+block2.style.height = '5rem';
 block2.style.border = '1px solid #000';
 
 /*выпадающее меню*/
@@ -120,4 +128,3 @@ function showMessage(message) {
     console.log(json);
     document.getElementById('subscribe').appendChild(messageElem);
 }
-

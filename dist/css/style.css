@@ -167,7 +167,7 @@ button:active {
 }
 
 .time {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: block;
   position: absolute;
   top: 90%;
@@ -217,7 +217,51 @@ button:active {
   width: 7rem;
 }
 
+.swiper {
+  max-width: 30rem;
+  max-height: 30rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 32rem 0;
+}
+
+.image-slider__image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-slider__image img {
+  width: 30rem;
+  height: 30rem;
+}
+
+/* пагинация */
+
+.image-slider .swiper-pagination {
+  bottom: 0;
+}
+
+/* буллеты */
+
+.image-slider .swiper-pagination-bullet {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+}
+
 /*--------------------*/
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
 
 h1 {
   text-align: center;
@@ -237,6 +281,7 @@ h3 {
 
 .block {
   text-align: center;
+  /*max-width: 123rem;*/
   margin: 3rem auto;
 }
 
@@ -250,8 +295,8 @@ h3 {
 .css {
   border: 1px solid #000;
   margin: auto;
-  width: 64rem;
-  height: 20rem;
+  width: 32rem;
+  height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,11 +310,17 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.span {
+  position: absolute;
+  top: 1rem;
 }
 
 .cssB2 {
-  width: 16rem;
-  height: 10rem;
+  width: 8rem;
+  height: 5rem;
   border: 1px solid #000;
 }
 
@@ -327,6 +378,30 @@ body.lock {
   border: 1px solid #000;
 }
 
+.footer {
+  min-height: 3rem;
+  background-color: #000;
+}
+
+.footer-a {
+  padding: 1rem 0 0 0;
+}
+
+.footer-a a {
+  color: #fff;
+}
+
+/*
+@media (max-width: 768px) {
+    .block {
+        border: 10px solid #000;
+        text-align: center;
+        max-width: 3rem;
+        margin: 3rem auto;
+    }
+}
+*/
+
 @media (max-width: 1280px) {
   button:hover {
     background: none;
@@ -338,8 +413,63 @@ body.lock {
   }
 }
 
+@media (max-width: 800px) {
+  .videoItem {
+    max-width: 40rem;
+  }
+
+  .time {
+    font-size: 1.4rem;
+  }
+
+  .swiper {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+
+  .image-slider__image img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .videoItem {
+    max-width: 30rem;
+  }
+
+  .time {
+    font-size: 1rem;
+  }
+
+  .image-slider .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .videoItem {
+    max-width: 20rem;
+  }
+
+  .time {
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-width: 300px) {
   button {
     padding: 0.6rem 1.7rem;
+  }
+
+  .videoItem {
+    max-width: 15rem;
+  }
+
+  .time {
+    font-size: 0.3rem;
   }
 }
