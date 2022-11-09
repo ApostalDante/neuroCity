@@ -1,0 +1,67 @@
+.swiper {
+    max-width: 30rem;
+    max-height: 30rem;
+}
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 32rem 0;
+}
+.image-slider {
+}
+.swiper-container {
+}
+.image-slider__wrapper {
+}
+.swiper-wrapper {
+}
+.image-slider_slide {
+}
+.swiper-slide {
+}
+.image-slider__image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-slider__image img {
+    width: 30rem;
+    height: 30rem;
+}
+
+/* пагинация */
+.image-slider .swiper-pagination {
+    bottom: 0;
+}
+/* буллеты */
+.image-slider .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+}
+
+@media (max-width: 800px) {
+    .swiper {
+        max-width: 20rem;
+        max-height: 20rem;
+    }
+    .image-slider__image img {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media (max-width: 600px) {
+    .image-slider .swiper-pagination-bullet {
+        width: 1rem;
+        height: 1rem;
+        line-height: 1rem;
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 400px) {
+}
+@media (max-width: 300px) {
+}
